@@ -31,6 +31,11 @@ Some IDE might require to manually select the project to auto lint it while edit
 
 Run `npm run validate` before pushing changes to ensure they are fully linted and can be compiled.
 
+### Custom Types Files
+
+To ensure better linting and typed support IDE, add all custom types in `src/types/`.
+They are auto-detected by `tsconfig.json`.
+
 ## All Important Npm Commands
 
 | Script                 | Function                          |
