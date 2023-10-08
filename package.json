@@ -1,0 +1,39 @@
+{
+  "name": "linted-typescript-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node --require ts-node/register index.ts",
+    "lint": "npx eslint .",
+    "lint:fix": "npx eslint . --fix",
+    "prettier": "npx prettier . --check",
+    "prettier:fix": "npx prettier . --write",
+    "format": "npm run prettier:fix && npm run lint:fix",
+    "test:compile": "npx tsc --noEmit",
+    "test:run": "node --require ts-node/register index.ts test-run",
+    "validate": "npx prettier . --write --list-different && npx eslint . --fix && npx tsc --noEmit && npm run test:run"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "log4js": "^6.4.2"
+  },
+  "devDependencies": {
+    "@tsconfig/node-lts": "^18.12.5",
+    "@typescript-eslint/eslint-plugin": "^6.7.0",
+    "@typescript-eslint/parser": "^6.7.0",
+    "eslint": "^8.49.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.28.1",
+    "eslint-plugin-jsdoc": "^43.0.1",
+    "eslint-plugin-json": "^2.1.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-unicorn": "^48.0.1",
+    "prettier": "^3.0.3",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  }
+}
